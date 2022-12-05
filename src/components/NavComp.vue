@@ -1,14 +1,14 @@
 <template>
     <div class="container">
-        <nav class="row justify-content-between align-items-center">
+        <nav class="row justify-content-between m-auto">
             <div class="col-3">
-                <img class="w-75" src="../assets/img/images/logo.png" alt="logo-fable">
+                <img class="w-50" src="../assets/img/images/logo.png" alt="logo-fable">
             </div>
-            <ul class="col-6 d-flex align-items-center">
-                <li v-for="(elem, index) in navList" :key="index" class="text-center align-items-center mx-1">
+            <ul class="col-6 d-flex align-items-center ">
+                <a v-for="(elem, index) in navList" :key="index" class="text-center align-items-center mx-1 py-4">
                     <img :src="require(`../assets/img/${elem.img}`)">
                     <div>{{elem.name}}</div>
-                </li>
+                </a>
             </ul>
         </nav>
     </div>
@@ -57,7 +57,16 @@ data() {
 </script>
 
 <style lang="scss" scoped>
-nav {
-    height: 80px;
+.container {
+    width: 80%;
 }
+nav {
+    height: 90px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #594e9e;
+}
+
 </style>
