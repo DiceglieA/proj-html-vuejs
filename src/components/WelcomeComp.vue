@@ -74,8 +74,14 @@
         </div>
     </section>
 
-    <section>   <!-- sezione 3 -->
-        <div></div>
+    <section class="bg-kids">   <!-- sezione 3 -->
+        <div class="row">
+            <div v-for="(elem, index) in statsData" :key="index" class="data-card text-center col-3">
+                <div class="n-card"> {{elem.number}} </div>
+                <div class="title-card"> {{elem.name}} </div>
+                <p class="descript-card"> {{elem.description}} </p>
+            </div>
+        </div>
     </section>
   </div>
 </template>
@@ -120,6 +126,28 @@ data() {
                 title: 'Varied Classes',
                 notes: 'Pulvinar est metro ligula blandit maecenas retrum gravida cuprum. Maecenas node estibulum.',
             }
+        ],
+        statsData : [
+            {
+                number: '507',
+                name: 'Our Pupils',
+                description: 'Pulvinar forte maestro mode terminal est elipsis prism',
+            },
+            {
+                number: '235',
+                name: 'Teaching Hours',
+                description: 'Elipsis morbi nulla a metro interdum vitae elite',
+            },
+            {
+                number: '100%',
+                name: 'Satisfied Parents',
+                description: 'Elementum pulvinar detos diaspis blandit.',
+            },
+            {
+                number: '1050',
+                name: 'Meals Per Year',
+                description: 'Pulvinar forte maestro mode terminal est elipsis prism',
+            },
         ]
     }
 }
@@ -171,6 +199,30 @@ data() {
     .title {
         color: #554e95;
     }
+}
+.bg-kids {
+    background-image: url('../assets/img/images/parallax_01.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 280px;
+    color: white;
+}
+.data-card {
+    margin-top: 50px;
+}
+.n-card {
+    clip-path: circle();
+    border: 2px solid white;
+    padding: 20px;
+    font-size: 30px;
+}
+.title-card {
+    font-weight: bolder;
+    margin: 10px;
+}
+.descript-card {
+    font-size: 12px;
+    padding: 0 20px;
 }
 
 
