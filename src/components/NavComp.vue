@@ -5,8 +5,8 @@
                 <img class="w-50" src="../assets/img/images/logo.png" alt="logo-fable">
             </div>
             <ul class="col-6 d-flex align-items-center ">
-                <a v-for="(elem, index) in navList" :key="index" class="text-center align-items-center mx-1 py-4">
-                    <img :src="require(`../assets/img/${elem.img}`)">
+                <a v-for="(elem, index) in navList" :key="index" class="text-center align-items-center mx-1 py-2">
+                    <img :src="require(`../assets/img/${elem.image}`)" class="p-2">
                     <div>{{elem.name}}</div>
                 </a>
             </ul>
@@ -23,31 +23,31 @@ data() {
     return {
         navList: [
             {
-                img: "home.png",
+                image: "home.png",
                 name: "Home"
             },
             {
-                img: "document.png",
+                image: "document.png",
                 name: "Pages"
             },
             {
-                img: "printer.png",
+                image: "printer.png",
                 name: "Blog"
             },
             {
-                img: "cart.png",
+                image: "cart.png",
                 name: "Shop"
             },
             {
-                img: "lab.png",
+                image: "lab.png",
                 name: "Shortcodes"
             },
             {
-                img: "chat.png",
+                image: "chat.png",
                 name: "Support"
             },
             {
-                img: "envelope.png",
+                image: "envelope.png",
                 name: "Contact"
             },
         ]

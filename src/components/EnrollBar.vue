@@ -1,5 +1,5 @@
 <template>
-  <div class="container w-100">
+  <div class="container">
     <div class="en-bar">
         <h1>How to Enroll Your Child to a class?</h1>
         <a href="#!">Learn more &gt;</a>
