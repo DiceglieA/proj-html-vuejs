@@ -1,4 +1,4 @@
-<template>
+o0<template>
   <div>
     <div class="text-center m-4">
         <h1>Our Classes</h1>
@@ -19,24 +19,24 @@
 
          <!-- Creare componente Card nel Refactoring -->
 
-      <div>
-        <div class="class-card row col-6">  <!--  Possibile componente -->
-          <div class="text-card col-6">
+      <div class="row">
+        <div v-for="(elem, index) in classData" :key="index" class="class-card row col-6">  <!--  Possibile componente -->
+          <div class="text-card p-3 col-6">
             <div>Little Lambs</div>
-            <div>Class name</div>
-            <div class="row text-center">
-              <div class="col-6">
+            <div class="sizing">Class name</div>
+            <div class="row text-center sizing">
+              <div class="col-6 mt-5">
                 <div>12-24</div>
                 <div>Month olds</div>
               </div>
-              <div class="col-6">
+              <div class="col-6 mt-5">
                 <div>9</div>
                 <div>Class size</div>
               </div>
             </div>
           </div>
-          <div class="img-card col-6">
-            <img src="" alt="">
+          <div class="img-card col-6 p-0">
+            <img src="../assets/img/images/class_01-690x506.jpg" alt="">
             <button> READ MORE &gt;</button>
           </div>
         </div>
@@ -91,4 +91,32 @@ data() {
   width: 80%;
   margin: auto;
 }
+.class-card {
+  height: 200px;
+  padding: 20px;
+}
+.text-card {
+  background-color: #4c4a9b;
+  color: white;
+}
+.sizing {
+  font-size: 10px;
+}
+.img-card{
+  position: relative;
+  img {
+    width: 100%;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #fe6601;
+    color: white;
+    border: none;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
 </style>
