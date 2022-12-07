@@ -109,8 +109,6 @@ data() {
     padding: 1rem;
     width: 23%;
 }
-.violet {
-    color: #4c4a9b;
-}
+
 
 </style>

@@ -67,4 +67,7 @@ ul {
 a {
   text-decoration: none;
 }
+.violet {
+    color: #4c4a9b;
+}
 </style>

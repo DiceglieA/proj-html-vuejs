@@ -1,8 +1,8 @@
-o0<template>
+<template>
   <div>
     <div class="container">
       <div class="row mt-5 mb-3">
-        <h4 class="col-6">
+        <h4 class="col-6 violet">
         We provided four classes with nine to twenty children each aged twelve month to five years of age.
         </h4>
         <p class="col-6">
