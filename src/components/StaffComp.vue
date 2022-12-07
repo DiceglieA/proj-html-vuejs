@@ -1,15 +1,28 @@
 <template>
-  <div class="container-staff">
-    <div class="row mt-5 mb-3">
-      <h4 class="col-6 violet">
-      Our staff consists of three theachers and one assistant with experience in early childhood care.
-      </h4>
-      <p class="col-6">
-      Praesent arcu gravida vehicula est node maecenas loareet morbi a desis luctus. Urna eget lacinia eleifend praesent luctus a arcu quis facilisis venenatis. Aenean interdum, nibh vitae sodales, magna ante feugiat elit maecenas.
-      </p>
+  <div>
+    <div class="container-staff">
+      <div class="row mt-5 mb-3">
+        <h4 class="col-6 violet">
+        Our staff consists of three theachers and one assistant with experience in early childhood care.
+        </h4>
+        <p class="col-6">
+        Praesent arcu gravida vehicula est node maecenas loareet morbi a desis luctus. Urna eget lacinia eleifend praesent luctus a arcu quis facilisis venenatis. Aenean interdum, nibh vitae sodales, magna ante feugiat elit maecenas.
+        </p>
+      </div>
+      <CardstaffComp /> <!-- (da ciclare )TODO:  --> 
     </div>
-    <CardstaffComp /> <!-- (da ciclare ) -->
-    
+    <div class="bg-kids text-center d-flex flex-column justify-content-center">
+      <div>
+        <img src="../assets/img/images/quote_alt.png" alt="quotes">
+      </div>
+      <div class="text w-75 mx-auto my-5">
+        Fable Kindergarten is a great place for my daughter to start her schooling experience. It's welcoming and safe and my daughter loves being there.
+      </div>
+      <div />
+      <div>
+        Joe R. Hamblen
+      </div>
+    </div>
   </div>
 </template>
 
@@ -57,5 +70,24 @@ data() {
 .container-staff {
   width: 80%;
   margin: auto;
+}
+.bg-kids {
+  background-image: url(../assets/img/images/parallax_02.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: white;
+
+  img {
+    width: 40px;
+    clip-path: circle();
+    border: 2px solid white;
+
+    TODO: fare cerchio
+  }
+
+  .text {
+    font-size: 20px;
+  }
 }
 </style>
