@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container-bar">
     <div class="en-bar">
-        <h1>How to Enroll Your Child to a class?</h1>
-        <a href="#!">Learn more &gt;</a>
+        <h1>{{datibars.title}}</h1>
+        <a href="#!">{{datibars.button}} &gt;</a>
     </div>
   </div>
 </template>
@@ -10,18 +10,21 @@
 <script>
 export default {
 name: 'EnrollBar',
+props: {
+  datibars: Object
+}
 }
 </script>
 
 <style lang="scss" scoped>
-.container {
+.container-bar {
     background-image: url(../assets/img/images/pattern.png);
     height: 90px;
-    width: 100%;
+    background-size: cover;
 }
 .en-bar{
-    height: 90px;
     width: 80%;
+    height: 90px;
     margin: auto;    
     display: flex;
     align-items: center;
@@ -32,7 +35,7 @@ a {
     text-decoration: none;
     color: white;
     border: 2px solid white;
-    font-size: 25px;
-    padding: 2px 3px;
+    font-size: 20px;
+    padding: 3px 5px;
 }
 </style>

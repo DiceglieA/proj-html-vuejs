@@ -1,12 +1,5 @@
 o0<template>
   <div>
-    <div class="text-center m-4">
-        <h1>Our Classes</h1>
-        <p>Our preschool program has four dedicated classes</p>
-        <div>
-            <img src="../assets/img/images/header_divider.png" alt="waves">
-        </div>
-    </div>
     <div class="container">
       <div class="row mt-5 mb-3">
         <h4 class="col-6">
@@ -19,36 +12,59 @@ o0<template>
 
          <!-- Creare componente Card nel Refactoring -->
 
-      <div class="row">
-        <div v-for="(elem, index) in classData" :key="index" class="class-card row col-6">  <!--  Possibile componente -->
+      <div class="row mb-5">
+        <div v-for="(elem, index) in classData" :key="index" class="class-card row col-6 m-auto">  <!--  Possibile componente -->
           <div class="text-card p-3 col-6">
-            <div>Little Lambs</div>
+            <div>{{elem.name}}</div>
             <div class="sizing">Class name</div>
             <div class="row text-center sizing">
               <div class="col-6 mt-5">
-                <div>12-24</div>
-                <div>Month olds</div>
+                <div>{{elem.age}}</div>
+                <div>{{elem.description}} olds</div>
               </div>
               <div class="col-6 mt-5">
-                <div>9</div>
+                <div>{{elem.size}}</div>
                 <div>Class size</div>
               </div>
             </div>
           </div>
           <div class="img-card col-6 p-0">
-            <img src="../assets/img/images/class_01-690x506.jpg" alt="">
+            <img :src="require(`../assets/img/images/${elem.image}`)" alt="">
             <button> READ MORE &gt;</button>
           </div>
         </div>
       </div>
 
     </div>
+    <!-- componente sfondo viola -->
+    <div>
+      <AchievementComp />
+    </div>
+    <!-- componente immagini fascia(forse) -->
+    <div class="row">
+      <div class="col-3 p-0">
+        <img class="w-100" src="../assets/img/images/gallery_01-690x506.jpg" alt="">
+      </div>
+      <div class="col-3 p-0">
+        <img class="w-100" src="../assets/img/images/gallery_02-690x506.jpg" alt="">
+      </div>
+      <div class="col-3 p-0">
+        <img class="w-100" src="../assets/img/images/gallery_03-690x506.jpg" alt="">
+      </div>
+      <div class="col-3 p-0">
+        <img class="w-100" src="../assets/img/images/gallery_04-690x506.jpg" alt="">
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import AchievementComp from './AchievementComp.vue'
 export default {
 name: 'ClassesComp',
+components: {
+  AchievementComp,
+},
 data() {
   return {
     classData: [
@@ -93,14 +109,14 @@ data() {
 }
 .class-card {
   height: 200px;
-  padding: 20px;
+  padding: 12px;
 }
 .text-card {
   background-color: #4c4a9b;
   color: white;
 }
 .sizing {
-  font-size: 10px;
+  font-size: 12px;
 }
 .img-card{
   position: relative;

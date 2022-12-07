@@ -1,14 +1,6 @@
 <template>
-  <div class="w-container">
-    <div class="text-center m-4">
-        <h1>Welcome to Fable</h1>
-        <p>Fable daycare, preschool, and kindergarten</p>
-        <div>
-            <img src="../assets/img/images/header_divider.png" alt="waves">
-        </div>
-    </div>
-    
-    <section>  <!-- <! Sezione 1 !> -->
+  <div>
+    <section class="w-container">  <!-- <! Sezione 1 !> -->
         <div class="row">
             <div v-for="(elem, index) in welcomeData" :key="index" class="w-card col-3 text-center">
                 <div class="w-100 mb-3">
@@ -21,7 +13,7 @@
     </section>
     
     <section class="bg-section">  <!-- <! Sezione 2 !> -->
-        <div class="row py-5 px-1">
+        <div class="w-container row py-5 px-1">
             <div class="left col-6">    <!-- Parte sinistra -->
                 <div class="d-flex">
                     <div class="overview orange">

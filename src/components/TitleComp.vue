@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="text-center m-4">
-        <h1>Welcome to Fable</h1>
-        <p>Fable daycare, preschool, and kindergarten</p>
+        <h1>{{datititle.title}}</h1>
+        <p>{{datititle.subtitle}}</p>
         <div>
-            <img src="../assets/img/images/header_divider.png" alt="waves">
+          <img :src="require(`../assets/img/images/${datititle.image}`)">
         </div>
     </div>
   </div>
@@ -12,7 +12,10 @@
 
 <script>
 export default {
-name: 'TitleComp'
+name: 'TitleComp',
+props: {
+  datititle: Object
+}
 }
 </script>
 
