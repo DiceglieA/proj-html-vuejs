@@ -63,18 +63,92 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-3"></div>
+
+<!-- TODO: emit da maincomp array poste proprs array -->
+
+            <div class="col-3">
+                <div class="title-section">
+                    RECENT POST
+                </div>
+                <div class="line"></div>
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <img class="w-100 " src="../assets/img/images/blog_09-150x150.jpg" alt="">
+                    </div>
+                    <div class="col-8">
+                        <div class="title-post">
+                            Drawing and Painting Lessons
+                        </div>
+                        <div>
+                            <img src="../assets/img/images/date_footer.png" alt="">
+                            <span class="date-post">October 03, 2014</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <img class="w-100" src="../assets/img/images/blog_10-150x150.jpg" alt="">
+                    </div>
+                    <div class="col-8">
+                        <div class="title-post">
+                            Fall Parents Meeting Day
+                        </div>
+                        <div>
+                            <img src="../assets/img/images/date_footer.png" alt="">
+                            <span class="date-post">October 03, 2014</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img class="w-100" src="../assets/img/images/blog_08-150x150.jpg" alt="">
+                    </div>
+                    <div class="col-8">
+                        <div class="title-post">
+                            Birthday in Kindergarten
+                        </div>
+                        <div>
+                            <img src="../assets/img/images/date_footer.png" alt="">
+                            <span class="date-post">September 20, 2014</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="social">
-
+    <section class="social-container">
+        <div class="d-flex justify-content-center">
+            <div class="social">
+                <img src="../assets/img/images/behance.png" alt="">
+            </div>
+            <div class="social">
+                <img src="../assets/img/images/dribbble.png" alt="">
+            </div>
+            <div class="social">
+                <img src="../assets/img/images/envato.png" alt="">
+            </div>
+            <div class="social">
+                <img src="../assets/img/images/facebook.png" alt="">
+            </div>
+            <div class="social">
+                <img src="../assets/img/images/twitter.png" alt="">
+            </div>
+        </div>
+        <div class="credit violet">
+            &#169; Fable - Children Kindergarten WordPress Theme by QuanticaLabs
+        </div>
     </section>
   </div>
 </template>
 
 <script>
 export default {
-
+name: 'FooterComp',
+props: {
+    post: Object
+}
 }
 </script>
 
@@ -118,5 +192,22 @@ p {
     img {
         margin-right: 6px;
     }
+}
+.title-post {
+font-weight: bolder;
+font-size: 14px;
+}
+
+.date-post {
+    font-size: 14px;
+    margin-left: 10px;
+}
+.social {
+background-color: #fe6601;
+margin: 30px 1px;
+}
+.credit {
+text-align: center;
+margin-bottom: 25px;
 }
 </style>
