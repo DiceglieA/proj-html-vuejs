@@ -15,10 +15,10 @@
       <div>
         <img src="../assets/img/images/quote_alt.png" alt="quotes">
       </div>
-      <div class="text w-75 mx-auto my-5">
+      <div class="text w-75 mx-auto mt-5 mb-4">
         Fable Kindergarten is a great place for my daughter to start her schooling experience. It's welcoming and safe and my daughter loves being there.
       </div>
-      <div />
+      <div class="line mx-auto mb-4" />
       <div>
         Joe R. Hamblen
       </div>
@@ -83,11 +83,16 @@ data() {
     clip-path: circle();
     border: 2px solid white;
 
-    TODO: fare cerchio
+    // TODO: fare cerchio
   }
 
   .text {
     font-size: 20px;
+  }
+
+  .line{
+    width: 50px;
+    border-top: 2px solid white;
   }
 }
 </style>
