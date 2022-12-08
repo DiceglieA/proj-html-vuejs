@@ -28,6 +28,7 @@
 
 <script>
 import CardstaffComp from './CardstaffComp.vue'
+
 export default {
 name: 'StaffComp',
 component: {

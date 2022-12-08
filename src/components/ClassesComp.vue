@@ -36,11 +36,11 @@
       </div>
 
     </div>
-    <!-- componente sfondo viola -->
+    
     <div>
       <AchievementComp />
     </div>
-    <!-- componente immagini fascia(forse) -->
+   
     <div class="row">
       <div class="col-3 p-0">
         <img class="w-100" src="../assets/img/images/gallery_01-690x506.jpg" alt="">
@@ -134,5 +134,7 @@ data() {
     padding: 10px;
   }
 }
+
+
 
 </style>

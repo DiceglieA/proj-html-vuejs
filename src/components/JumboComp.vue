@@ -1,5 +1,5 @@
 <template>
-  <div class="bg row align-items-end">
+  <div class="bg row align-items-end m-0">
     <img class="offset-5 col-1" src="../assets/img/images/slider_slide3_img2.png" alt="">
     <img class="offset-2 col-1" src="../assets/img/images/slider_slide3_img3.png" alt="">
   </div>

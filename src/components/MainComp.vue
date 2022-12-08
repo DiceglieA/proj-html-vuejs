@@ -11,8 +11,13 @@
     <TitleComp :datititle="arrtitle[3]" />
     <div class="row container-80">
       <NewsComp v-for="(elem, index) in postcards" :key="index" :post="postcards[index]" class="col-4"/>
+      <div class="my-5 d-flex justify-content-center">
+        <a class="btn-blog" href="#!">GO TO BLOG &gt;</a>
+      </div>
     </div>
-    <a href=""></a>
+    <MapComp /> <!--TODO: creare il puzzle-->
+    <TitleComp :datititle="arrtitle[4]" />
+    <ContactComp />
   </div>
 </template>
 
@@ -23,6 +28,8 @@ import ClassesComp from './ClassesComp.vue';
 import StaffComp from './StaffComp.vue';
 import TitleComp from "./TitleComp.vue";
 import NewsComp from "./NewsComp.vue";
+import MapComp from "./MapComp.vue";
+import ContactComp from "./ContactComp.vue";
 
 export default {
 name: 'MainComp',
@@ -33,6 +40,8 @@ components: {
     StaffComp,
     TitleComp,
     NewsComp,
+    MapComp,
+    ContactComp,
 },
 data() {
   return {
@@ -111,5 +120,11 @@ data() {
 .container-80 {
   width: 80%;
   margin: auto;
+}
+.btn-blog {
+  color: white;
+  background-color: #fe6601;
+  padding: 10px 18px;
+  font-weight: bolder;
 }
 </style>

@@ -9,8 +9,14 @@
         <h4>{{post.title}}</h4>
         <p>{{post.text}}</p>
         <div class="row">
-            <span class="col-6">{{post.productor}}</span>
-            <span class="col-6">{{post.section}}</span>
+            <div class="col-6 d-flex align-items-center subtitle">
+                <img src="../assets/img/images/author.png" alt="">
+                <span class="px-4">{{post.productor}}</span>
+            </div>
+            <div class="col-6 d-flex align-items-center subtitle">
+                <img src="../assets/img/images/category.png" alt="">
+                <span class="px-4">{{post.section}}</span>
+            </div>
         </div>
     </div>
   </div>
@@ -57,6 +63,11 @@ h4 {
 }
 p {
     font-size: 16px;
-    margin: .8em 0;
+    padding: .8em 0;
+    border-bottom: 1px solid lightgrey;
+}
+.subtitle {
+    color: grey;
+    font-size: 13px;
 }
 </style>

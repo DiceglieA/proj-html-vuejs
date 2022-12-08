@@ -67,7 +67,7 @@
     </section>
 
     <section class="bg-kids">   <!-- sezione 3 -->
-        <div class="row">
+        <div class="row w-container">
             <div v-for="(elem, index) in statsData" :key="index" class="data-card text-center col-3">
                 <div class="n-card"> {{elem.number}} </div>
                 <div class="title-card"> {{elem.name}} </div>
