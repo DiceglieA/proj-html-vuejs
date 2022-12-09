@@ -13,7 +13,7 @@
          <!-- Creare componente Card nel Refactoring -->
 
       <div class="row mb-5">
-        <div v-for="(elem, index) in classData" :key="index" class="class-card row col-6 m-auto">  <!--  Possibile componente -->
+        <div v-for="(elem, index) in classData" :key="index" class="class-card row col-6 m-auto">
           <div class="text-card p-3 col-6">
             <div>{{elem.name}}</div>
             <div class="sizing">Class name</div>

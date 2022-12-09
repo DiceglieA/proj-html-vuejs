@@ -9,7 +9,10 @@
         Praesent arcu gravida vehicula est node maecenas loareet morbi a desis luctus. Urna eget lacinia eleifend praesent luctus a arcu quis facilisis venenatis. Aenean interdum, nibh vitae sodales, magna ante feugiat elit maecenas.
         </p>
       </div>
-      <CardstaffComp /> <!-- (da ciclare )TODO:  --> 
+      <div class="row mb-5">
+         <CardstaffComp v-for="(elem, index) in staff" :key="index" :staff="staff[index]" class="col-6"/>
+      </div>
+      <!-- (da ciclare )TODO:  --> 
     </div>
     <div class="bg-kids text-center d-flex flex-column justify-content-center">
       <div>
@@ -31,7 +34,7 @@ import CardstaffComp from './CardstaffComp.vue'
 
 export default {
 name: 'StaffComp',
-component: {
+components: {
   CardstaffComp,
 },
 data() {
@@ -39,24 +42,28 @@ data() {
     staff: [
       {
         name: 'Ruth Richie',
+        image: 'team_04.jpg',
         profession: 'Teacher',
         description: 'I have just finisched my studies in Early Childhood Education, and i am also the kid s yoga teacher here at Fable. I enjoy cooking, swimming and bike riding in my free time.',
         social: ['mail.png','facebook.png','pinterest.png',]
       },
       {
         name: 'Katie Willmore',
+        image: 'team_03.jpg',
         profession: 'Assistant Teacher',
         description: 'IMy name is Katie. I grew up and studied in Canada. This is my second year at Fable and love every minute of it,making the children s learning experience fun.',
         social: ['dribbble.png','stumbleupon.png','instagram.png']
       },
       {
         name: 'Angelica Watson',
+        image: 'team_02.jpg',
         profession: 'Lead Teacher',
         description: 'I hold a degree in Early Childhood Education and in advanced English language certificate. I have been a workingk as a kindergarten teacher since 2002.',
         social: ['bing.png','skype.png','linkedin.png']
       },
       {
         name: 'Angela Lynn',
+        image: 'team_01.jpg',
         profession: 'Teacher',
         description: 'I have completed a Graduate Diploma in Early Childhood teaching. I have worked with children aged from six weeks to eight years. This is my second year at Fable.',
         social: ['youtube.png','twitter.png','googleplus.png']
