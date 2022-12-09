@@ -4,9 +4,10 @@
             <div class="col-3">
                 <img class="w-50" src="../assets/img/images/logo.png" alt="logo-fable">
             </div>
-            <ul class="col-6 d-flex align-items-center ">
-                <a v-for="(elem, index) in navList" :key="index" @click="navselect(index)" :class="index === activeindex ? 'active' : ''" class="text-center align-items-center mx-1 py-2">
-                    <img :src="require(`../assets/img/${elem.image}`)" class="p-2">
+            <ul class="col-6 d-flex align-items-center">
+                <a v-for="(elem, index) in navList" :key="index" @click="navselect(index)" :class="index === activeindex ? 'active' : ''" class="text-center align-items-center px-2 py-1 d-flex flex-column">
+                    <img :src="require(`../assets/img/${elem.image}`)" class="p-2" :class="index === activeindex ? 'hidden' : 'block'">
+                    <img :src="require(`../assets/img/${elem.images}`)" class="p-2" :class="index === activeindex ? 'block' : 'hidden'">
                     <div>{{elem.name}}</div>
                 </a>
             </ul>
@@ -25,30 +26,37 @@ data() {
         navList: [
             {
                 image: "home.png",
+                images: "home-2.png",
                 name: "Home"
             },
             {
                 image: "document.png",
+                images: "document-2.png",
                 name: "Pages"
             },
             {
                 image: "printer.png",
+                images: "printer-2.png",
                 name: "Blog"
             },
             {
                 image: "cart.png",
+                images: "cart-2.png",
                 name: "Shop"
             },
             {
                 image: "lab.png",
+                images: "lab-2.png",
                 name: "Shortcodes"
             },
             {
                 image: "chat.png",
+                images: "chat-2.png",
                 name: "Support"
             },
             {
                 image: "envelope.png",
+                images: "envelope-2.png",
                 name: "Contact"
             },
         ]
@@ -73,6 +81,7 @@ a {
     text-decoration: none;
     cursor: pointer;
     color: #594e9e;
+    height: 90px;
 }
 a:hover {
     background-color: #e8e6e7;
@@ -84,6 +93,12 @@ a:hover {
 .active {
     background-color: #fe6601;
     color: white;
+}
+.hidden {
+    display: none;
+}
+.block {
+    display: block;
 }
 
 </style>
