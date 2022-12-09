@@ -5,7 +5,7 @@
         <div>
           <img class="w-100" :src="require(`../assets/img/images/${staff.image}`)" alt="">
         </div>
-        <div class="text-center py-2">
+        <div class="text-center py-2 hover-violet">
           <div class="violet">{{staff.name}}</div>
           <div>{{staff.profession}}</div>
         </div>
@@ -51,5 +51,8 @@ props: {
 .social {
   background-color: #fe6601;
   margin-right: 4px;
+}
+.left:hover .hover-violet{
+  background-color: #e8e6e7;
 }
 </style>
