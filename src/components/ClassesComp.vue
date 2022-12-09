@@ -13,9 +13,9 @@
          <!-- Creare componente Card nel Refactoring -->
 
       <div class="row mb-5">
-        <div v-for="(elem, index) in classData" :key="index" class="class-card row col-6 m-auto">
+        <div v-for="(elem, index) in classData" :key="index" class="class-card row col-6 mx-auto my-1">
           <div class="text-card p-3 col-6">
-            <div>{{elem.name}}</div>
+            <div class="title-class">{{elem.name}}</div>
             <div class="sizing">Class name</div>
             <div class="row text-center sizing">
               <div class="col-6 mt-5">
@@ -108,7 +108,7 @@ data() {
   margin: auto;
 }
 .class-card {
-  height: 200px;
+  // height: 200px;
   padding: 12px;
 }
 .text-card {
@@ -116,7 +116,11 @@ data() {
   color: white;
 }
 .sizing {
-  font-size: 12px;
+  font-size: 16px;
+}
+.title-class {
+  font-size: 20px;
+  font-weight: bold;
 }
 .img-card{
   position: relative;

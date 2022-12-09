@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="thumbnails row" >
-                        <div class="img-small col-4 gutter" v-for="(elem, index) in carousel" :key="index" @click="setactivendex(index)" :class="{active: index === activeindex}">
+                        <div class="img-small col-4 gutter" v-for="(elem, index) in carousel" :key="index" @click="setactive(index)" :class="{active: index === activeindex}">
                             <img class="w-100 mb-1" :src="require(`../assets/img/images/${elem.image}`)" alt="">
                         </div>
                     </div>
@@ -97,7 +97,7 @@ export default {
 name: 'WelcomeComp',
 data() {
     return {
-        activeindex : 0,
+        activeindex: 0,
         direction : 1,
         welcomeData : [
             {
@@ -169,9 +169,9 @@ data() {
     }
 },
 methods: {
-    setactiveindex(index) {
-			this.activeindex = index;
-		},
+    setactive(index) {
+        this.activeindex = index
+    },
     slider(direction) {
 			if (direction > 0) {
 				this.activeindex++;
