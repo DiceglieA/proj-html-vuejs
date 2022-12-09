@@ -4,9 +4,9 @@
         <div class="row">
             <div v-for="(elem, index) in welcomeData" :key="index" class="w-card col-3 text-center">
                 <div class="w-100 mb-3">
-                    <img :src="require(`../assets/img/images/${elem.image}`)" alt="none" class="img-card" :class="((index % 2) == 0) ? 'orange' : 'violet' ">
+                    <img :src="require(`../assets/img/images/${elem.image}`)" alt="none" class="img-card" :class="((index % 2) == 0) ? 'orange' : 'bg-violet' ">
                 </div>
-                <h3 class="my-3"> {{elem.title}} </h3>
+                <h3 class="my-3 violet"> {{elem.title}} </h3>
                 <p> {{elem.notes}} </p>
             </div>
         </div>
@@ -37,9 +37,22 @@
                 </div>
             </div>
             <!-- carosello -->
-            <div class="right col-6">   <!-- Parte destra -->
+            <div class="right col-6 p-0">   <!-- Parte destra -->
                 <div>
-
+                    <div class="img-big">
+                        <div class="p-0">
+                            <img class="w-100" src="../assets/img/images/gallery_01-690x506.jpg" alt="">
+                        </div>
+                        <div class="d-flex justify-content-between btn-stripe">
+                            <div class="btn b-left" @click="changeSlide(-1)">&lt;</div>
+                            <div class="btn b-right" @click="changeSlide(1)">&gt;</div>
+                        </div>
+                    </div>
+                    <div class="thumbnails row" >
+                        <div class="img-small col-4 gutter" v-for="(elem, index) in carousel" :key="index" @click="setactivendex(index)" :class="{active: index === activeindex}">
+                            <img class="w-100 mb-1" :src="require(`../assets/img/images/${elem.image}`)" alt="">
+                        </div>
+                    </div>
                 </div>
                 <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -80,11 +93,12 @@
 
 <script>
 
-
 export default {
 name: 'WelcomeComp',
 data() {
     return {
+        activeindex : 0,
+        direction : 1,
         welcomeData : [
             {
               image: 'schoolbag_alt.png',
@@ -119,6 +133,17 @@ data() {
                 notes: 'Pulvinar est metro ligula blandit maecenas retrum gravida cuprum. Maecenas node estibulum.',
             }
         ],
+        carousel : [
+            {
+                image:'gallery_07-690x506.jpg',
+            },
+            {
+                image:'gallery_01-690x506.jpg',
+            },
+            {
+                image:'gallery_08-690x506.jpg',
+            }
+        ],
         statsData : [
             {
                 number: '507',
@@ -142,7 +167,26 @@ data() {
             },
         ]
     }
+},
+methods: {
+    setactiveindex(index) {
+			this.activeindex = index;
+		},
+    slider(direction) {
+			if (direction > 0) {
+				this.activeindex++;
+				if (this.activeindex === this.carousel.length) {
+					this.activeindex = 0;
+				}
+			} else {
+				if (this.activeindex === 0) {
+					this.activeindex = this.carousel.length;
+				}
+				this.activeindex--;
+			}
+		},
 }
+
 }
 </script>
 
@@ -154,7 +198,7 @@ data() {
 .orange {
     background-color: #fe6601;
 }
-.violet {
+.bg-violet {
     background-color: #554e95;
 }
 .img-card {
@@ -217,5 +261,33 @@ data() {
     padding: 0 20px;
 }
 
-
+.img-big {
+    position: relative;
+}
+.btn {
+    background-color: #fe6601;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+}
+.b-left {
+    position: absolute;
+    left: 0;
+    top: 45%;
+}
+.b-right {
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+.thumbnails {
+    padding: 12px 6px;
+}
+.gutter{
+    padding: 0 6px;
+}
+.active {
+    border-bottom: 2px solid #fe6601;
+}
 </style>

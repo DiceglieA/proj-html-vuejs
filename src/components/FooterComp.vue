@@ -20,12 +20,12 @@
                 </div>
                 <div class="line"></div>
                 <ul class="p-0 archive">
-                    <li>OCTOBER 2014 (2)</li>
-                    <li>SEPTEMBER 2014 (2)</li>
-                    <li>AUGUST 2014 (2)</li>
-                    <li>JULY 2014 (2)</li>
-                    <li>JUNE 2014 (2)</li>
-                    <li>MAY 2014 (1)</li>
+                    <a href="#!"><li>OCTOBER 2014 (2)</li></a>
+                    <a href="#!"><li>SEPTEMBER 2014 (2)</li></a>
+                    <a href="#!"><li>AUGUST 2014 (2)</li></a>
+                    <a href="#!"><li>JULY 2014 (2)</li></a>
+                    <a href="#!"><li>JUNE 2014 (2)</li></a>
+                    <a href="#!"><li>MAY 2014 (1)</li></a>
                 </ul>
             </div>
             <div class="col-3 px-3 features">
@@ -121,19 +121,19 @@
     <section class="social-container">
         <div class="d-flex justify-content-center">
             <div class="social">
-                <img src="../assets/img/images/behance.png" alt="">
+                <a href="#!"><img src="../assets/img/images/behance.png" alt=""></a>
             </div>
             <div class="social">
-                <img src="../assets/img/images/dribbble.png" alt="">
+                <a href="#!"><img src="../assets/img/images/dribbble.png" alt=""></a>
             </div>
             <div class="social">
-                <img src="../assets/img/images/envato.png" alt="">
+                <a href="#!"><img src="../assets/img/images/envato.png" alt=""></a>
             </div>
             <div class="social">
-                <img src="../assets/img/images/facebook.png" alt="">
+                <a href="#!"><img src="../assets/img/images/facebook.png" alt=""></a>
             </div>
             <div class="social">
-                <img src="../assets/img/images/twitter.png" alt="">
+                <a href="#!"><img src="../assets/img/images/twitter.png" alt=""></a>
             </div>
         </div>
         <div class="credit violet">
@@ -182,6 +182,7 @@ p {
         border: 2px solid rgb(255, 255, 255, 0.2);
         margin: 4px 0;
         padding: 12px;
+        color: white;
     }
 }
 .features {

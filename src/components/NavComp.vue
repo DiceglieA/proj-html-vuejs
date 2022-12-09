@@ -5,7 +5,7 @@
                 <img class="w-50" src="../assets/img/images/logo.png" alt="logo-fable">
             </div>
             <ul class="col-6 d-flex align-items-center ">
-                <a v-for="(elem, index) in navList" :key="index" class="text-center align-items-center mx-1 py-2">
+                <a v-for="(elem, index) in navList" :key="index" @click="navselect(index)" :class="index === activeindex ? 'active' : ''" class="text-center align-items-center mx-1 py-2">
                     <img :src="require(`../assets/img/${elem.image}`)" class="p-2">
                     <div>{{elem.name}}</div>
                 </a>
@@ -21,6 +21,7 @@ export default {
 name: 'NavComp',
 data() {
     return {
+        activeindex: 0,
         navList: [
             {
                 image: "home.png",
@@ -52,6 +53,11 @@ data() {
             },
         ]
     }
+},
+methods: {
+    navselect(index) {
+        this.activeindex = index
+    }
 }
 }
 </script>
@@ -67,6 +73,17 @@ a {
     text-decoration: none;
     cursor: pointer;
     color: #594e9e;
+}
+a:hover {
+    background-color: #e8e6e7;
+    border-bottom: 2px solid #4c4a9b;;
+}
+.orange {
+    background-color: #fe6601;
+}
+.active {
+    background-color: #fe6601;
+    color: white;
 }
 
 </style>

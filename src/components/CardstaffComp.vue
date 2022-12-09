@@ -6,7 +6,7 @@
           <img class="w-100" :src="require(`../assets/img/images/${staff.image}`)" alt="">
         </div>
         <div class="text-center py-2">
-          <div>{{staff.name}}</div>
+          <div class="violet">{{staff.name}}</div>
           <div>{{staff.profession}}</div>
         </div>
       </div>
@@ -43,9 +43,10 @@ props: {
 <style lang="scss" scoped>
 .quotes {
   border: 2px solid #fe6601;
-  padding: 10px;
+  padding: 10px 20px;
   width: 50%;
   text-align: end;
+  margin-left: -50px;
 }
 .social {
   background-color: #fe6601;

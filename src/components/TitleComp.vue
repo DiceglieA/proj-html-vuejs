@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center m-4">
-        <h1>{{datititle.title}}</h1>
+        <h1 class="violet">{{datititle.title}}</h1>
         <p>{{datititle.subtitle}}</p>
         <div>
           <img :src="require(`../assets/img/images/${datititle.image}`)">

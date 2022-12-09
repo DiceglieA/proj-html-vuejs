@@ -127,4 +127,7 @@ data() {
   padding: 10px 18px;
   font-weight: bolder;
 }
+.btn-blog:hover {
+  background-color: #4c4a9b;;
+}
 </style>

@@ -16,7 +16,9 @@
     </div>
     <div class="bg-kids text-center d-flex flex-column justify-content-center">
       <div>
-        <img src="../assets/img/images/quote_alt.png" alt="quotes">
+        <div class="container-quote">
+          <img src="../assets/img/images/quote_alt.png" alt="quotes">
+        </div>
       </div>
       <div class="text w-75 mx-auto mt-5 mb-4">
         Fable Kindergarten is a great place for my daughter to start her schooling experience. It's welcoming and safe and my daughter loves being there.
@@ -87,10 +89,13 @@ data() {
   color: white;
 
   img {
-    width: 40px;
+    width: 60px;
     clip-path: circle();
     border: 2px solid white;
-
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    
     // TODO: fare cerchio
   }
 

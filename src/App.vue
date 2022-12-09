@@ -8,8 +8,8 @@
 
 <script>
 import HeaderComp from "./components/HeaderComp.vue";
-import MainComp from "./components/MainComp.vue"
-import FooterComp from "./components/FooterComp.vue"
+import MainComp from "./components/MainComp.vue";
+import FooterComp from "./components/FooterComp.vue";
 
 export default {
   name: "App",
@@ -43,5 +43,8 @@ a {
 }
 .violet {
     color: #4c4a9b;
+}
+.bg-violet {
+  background-color: #4c4a9b;
 }
 </style>

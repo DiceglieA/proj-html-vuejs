@@ -133,6 +133,9 @@ data() {
     font-size: 12px;
     padding: 10px;
   }
+  button:hover {
+    background-color: #4c4a9b;;
+  }
 }
 
 

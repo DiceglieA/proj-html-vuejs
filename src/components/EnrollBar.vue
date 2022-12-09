@@ -35,7 +35,11 @@ a {
     text-decoration: none;
     color: white;
     border: 2px solid white;
-    font-size: 20px;
-    padding: 3px 5px;
+    font-size: 18px;
+    padding: 5px 15px;
+}
+a:hover {
+  background-color: white;
+  color: #4c4a9b;
 }
 </style>
