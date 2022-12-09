@@ -40,12 +40,12 @@
             <div class="right col-6 p-0">   <!-- Parte destra -->
                 <div>
                     <div class="img-big">
-                        <div class="p-0">
-                            <img class="w-100" src="../assets/img/images/gallery_01-690x506.jpg" alt="">
+                        <div class="p-0" v-for="(elem, index) in carousel" :key="index">
+                            <img class="w-100" :src="require(`../assets/img/images/${elem.image}`)" alt="" :class="index === activeindex ? 'block' : 'hidden'">
                         </div>
                         <div class="d-flex justify-content-between btn-stripe">
-                            <div class="btn b-left" @click="changeSlide(-1)">&lt;</div>
-                            <div class="btn b-right" @click="changeSlide(1)">&gt;</div>
+                            <div class="btn b-left" @click="slider(-1)">&lt;</div>
+                            <div class="btn b-right" @click="slider(1)">&gt;</div>
                         </div>
                     </div>
                     <div class="thumbnails row" >
@@ -289,5 +289,12 @@ methods: {
 }
 .active {
     border-bottom: 2px solid #fe6601;
+}
+
+.block{
+    display: block;
+}
+.hidden {
+    display: none;
 }
 </style>
