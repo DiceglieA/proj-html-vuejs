@@ -48,6 +48,7 @@ props: {
   width: 50%;
   text-align: end;
   margin-left: -50px;
+  position: relative;
 }
 .social {
   background-color: #fe6601;
@@ -68,7 +69,6 @@ props: {
   position: absolute;
   top: 40%;
   left: 40%;
-  z-index: 10;
   font-size: 35px;
   display: none;
 }
